@@ -1,6 +1,6 @@
 // backend/api/index.js
 const express = require('express');
-const Userrouter = import("../routes/User");
+const Userrouter = require("../routes/User");
 
 const router = express.Router();
 
