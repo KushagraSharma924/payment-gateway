@@ -1,5 +1,5 @@
 // backend/routes/account.js
-const mongoose = require("mongoose")
+const mongoose = require("mongoose ")
 const express = require('express');
 const { authMiddleware } = require('../middleware');
 const { Account } = require('../db');
