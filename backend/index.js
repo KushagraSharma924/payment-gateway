@@ -10,7 +10,7 @@ app.use(cors());
 
 
 app.use('/api/v1',rootrouter);
-app.use('/api/v1/user/signup',authMiddleware,Userrouter)
+app.use('/api/v1/user/signup',Userrouter)
 
 app.listen(3001,function(){
     console.log(`Server is running on ${3001} `)

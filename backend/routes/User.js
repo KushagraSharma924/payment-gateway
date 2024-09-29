@@ -16,7 +16,7 @@ const signupBody = zod.object({
     password: zod.string()
 });
 
-router.post("/signup", async function (req, res) {
+router.post("/signup",  async function (req, res) {
     const { success } = signupBody.safeParse(req.body);
 
     if (!success) {
@@ -49,7 +49,7 @@ router.post("/signup", async function (req, res) {
         balance: 1 + Math.random() * 10000
     });
 
-    const token = jwt.sign({
+    const token = jwt.create({
         userId
     }, JWT_SECRET);
 
